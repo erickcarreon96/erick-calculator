@@ -1,0 +1,1 @@
+web: java -jar build/libs/erick-calculator-1.0.jar

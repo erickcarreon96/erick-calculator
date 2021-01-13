@@ -19,25 +19,29 @@ public class CalculatorController {
 
     @GetMapping("/sum")
     @ResponseBody
-    public String sum(@RequestParam("number1") String number1, @RequestParam("number2") String number2) {
-        return calculatorService.sum(Integer.valueOf(number1), Integer.valueOf(number2));
+    public int sum(@RequestParam("number1") int number1, @RequestParam("number2") int number2) {
+        return  calculatorService.sum(number1,number2);
+        //return calculatorService.sum(Integer.valueOf(number1), Integer.valueOf(number2));
     }
 
     @GetMapping("/subtraction")
     @ResponseBody
-    public String subtraction(@RequestParam("number1") String number1, @RequestParam("number2") String number2) {
-        return calculatorService.subtraction(Integer.valueOf(number1), Integer.valueOf(number2));
+    public int subtraction(@RequestParam("number1") int number1, @RequestParam("number2") int number2) {
+        return  calculatorService.subtraction(number1,number2);
+  //      return calculatorService.subtraction(Integer.valueOf(number1), Integer.valueOf(number2));
     }
 
     @GetMapping("/multiplication")
     @ResponseBody
-    public String multiplication(@RequestParam("number1") String number1, @RequestParam("number2") String number2) {
-        return calculatorService.multiplication(Integer.valueOf(number1), Integer.valueOf(number2));
+    public int multiplication(@RequestParam("number1") int number1, @RequestParam("number2") int number2) {
+        return  calculatorService.multiplication(number1,number2);
+ //       return calculatorService.multiplication(Integer.valueOf(number1), Integer.valueOf(number2));
     }
 
     @GetMapping("/division")
     @ResponseBody
-    public String division(@RequestParam("number1") String number1, @RequestParam("number2") String number2) {
-        return calculatorService.division(Integer.valueOf(number1), Integer.valueOf(number2));
+    public Double division(@RequestParam("number1") double number1, @RequestParam("number2") double number2) {
+        return  calculatorService.division(number1,number2);
+ //       return calculatorService.division(Integer.valueOf(number1), Integer.valueOf(number2));
     }
 }//Fin de class CalculatorController

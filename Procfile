@@ -1,1 +1,1 @@
-web: java -jar build/libs/erick-calculator-1.0.jar
+web: java -jar -Dspring.profiles.active=prod build/libs/erick-calculator-1.0.jar
